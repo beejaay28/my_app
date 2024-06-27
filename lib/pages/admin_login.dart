@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/main.dart';
+import 'package:my_app/pages/services/auth_service.dart';
 
 class AdminLogin extends StatelessWidget {
-  const AdminLogin({super.key});
+  AdminLogin({super.key});
+
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +76,7 @@ class AdminLogin extends StatelessWidget {
                       height: 20,
                     ),
                     TextFormField(
+                      controller: _emailController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
@@ -83,6 +88,7 @@ class AdminLogin extends StatelessWidget {
                       height: 10,
                     ),
                     TextFormField(
+                      controller: _passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -98,7 +104,12 @@ class AdminLogin extends StatelessWidget {
                         backgroundColor: Colors.green,
                         minimumSize: const Size(300, 35),
                       ),
-                      onPressed: () {},
+                      onPressed: () async {
+                        await AuthService().signIn(
+                            context: context,
+                            email: _emailController.text,
+                            password: _passwordController.text);
+                      },
                       child: const Text('Login'),
                     )
                   ],

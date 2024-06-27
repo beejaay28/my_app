@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "806896713005",
+    "project_id": "barangaydev",
+    "storage_bucket": "barangaydev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806896713005:android:ac3d9e6336144ab519a7a4",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5LTlevg6ZSma8bkeYAaOB11JqBOP5cpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806896713005:android:4b912fce9f72192c19a7a4",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5LTlevg6ZSma8bkeYAaOB11JqBOP5cpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

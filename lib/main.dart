@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/firebase_options.dart';
 import 'package:my_app/pages/admin_login.dart';
 import 'package:my_app/pages/resident_login.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -82,7 +88,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AdminLogin(),
+                          builder: (context) => AdminLogin(),
                         ),
                       );
                     },
